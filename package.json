@@ -5,8 +5,12 @@
   "repository": "https://github.com/ArthurPMachado/EcmaScript6.git",
   "author": "Arthur Pereira Machado <machadoparthur1@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "babel ./main.js -o ./bundle.js"
+  },
   "dependencies": {
     "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0"
   }
 }
