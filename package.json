@@ -6,7 +6,7 @@
   "author": "Arthur Pereira Machado <machadoparthur1@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "babel ./main.js -o ./bundle.js"
+    "dev": "babel ./main.js -o ./bundle.js -w"
   },
   "dependencies": {
     "@babel/cli": "^7.10.5",
