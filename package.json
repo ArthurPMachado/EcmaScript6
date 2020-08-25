@@ -1,0 +1,12 @@
+{
+  "name": "ES6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ArthurPMachado/EcmaScript6.git",
+  "author": "Arthur Pereira Machado <machadoparthur1@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/preset-env": "^7.11.0"
+  }
+}
