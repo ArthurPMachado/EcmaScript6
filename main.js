@@ -1,7 +1,13 @@
-class Calculadora {
-  static soma(a, b) {
-    return a + b;
-  }
-}
+const numbers = [1, 3, 8, 2, 10, 2, 1, 4];
 
-console.log(Calculadora.soma(2, 8));
+const newNumbers = numbers.map(function(item, index) {
+  return item + index;
+});
+
+console.log(newNumbers);
+
+const sum = numbers.reduce(function(total, next) {
+  return total + next;
+}, 0);
+
+console.log(sum);
