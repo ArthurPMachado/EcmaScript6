@@ -1,9 +1,14 @@
-const numbers = [1, 3, 8, 2, 10, 2, 1, 4];
+const usuario = {
+  nome: "Arthur",
+  idade: 21,
+  endereço: {
+    cidade: "São Paulo",
+    estado: "São Paulo"
+  }
+}
 
-const newNumbers = numbers.map(item => item * 2);
+function mostrarNome({ nome, idade}) {
+  console.log(nome, idade);
+}
 
-console.log(newNumbers);
-
-const teste = () => ({ nome: "Arthur" });
-
-console.log(teste());
+mostrarNome(usuario);
