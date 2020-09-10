@@ -1,18 +1,31 @@
 "use strict";
 
-var usuario = {
-  nome: "Arthur",
-  idade: 21,
-  endereço: {
-    cidade: "São Paulo",
-    estado: "São Paulo"
-  }
-};
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function mostrarNome(_ref) {
-  var nome = _ref.nome,
-      idade = _ref.idade;
-  console.log(nome, idade);
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// REST
+function sum(a, b) {
+  for (var _len = arguments.length, params = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+    params[_key - 2] = arguments[_key];
+  }
+
+  return params;
 }
 
-mostrarNome(usuario);
+console.log(sum(1, 6, 598, 4, 2, 4, 5, 6, 7)); // SPREAD
+
+var user1 = {
+  name: "Arthur",
+  age: 21,
+  college: "FIAP",
+  email: "machadoparthur1@gmail.com"
+};
+
+var user2 = _objectSpread(_objectSpread({}, user1), {}, {
+  name: "Roberto"
+});
+
+console.log(user2);
