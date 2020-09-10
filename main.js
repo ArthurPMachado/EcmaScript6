@@ -1,20 +1,5 @@
-// REST
+const name = "Arthur";
+const age = 21;
 
-function sum(a, b, ...params) {
-  return params;
-}
-
-console.log(sum(1, 6, 598, 4, 2, 4, 5, 6, 7));
-
-// SPREAD
-
-const user1 = {
-	name: "Arthur",
-	age: 21,
-	college: "FIAP",
-	email: "machadoparthur1@gmail.com"
-};
-
-const user2 = { ...user1, name: "Roberto" };
-
-console.log(user2);
+// console.log("Meu nome é " + name + " e tenhi " + age " anos.");
+console.log(`Meu nome é ${name} e tenho ${age} anos`);
