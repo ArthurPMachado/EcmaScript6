@@ -1,11 +1,16 @@
-const minhaPromise = () => new Promise((resolve, reject) => {
-  setTimeout(() => { resolve('OK') }, 2000);
-});
+import axios from 'axios';
 
-async function executaPromise() {
-  console.log(await minhaPromise());
-  console.log(await minhaPromise());
-  console.log(await minhaPromise());
+class Api {
+  static async getUserInfo(username) {
+    try {
+      const response = await axios.get(`https://api.github.com/users/${username}`);
+
+      console.log(response);
+    } catch (error) {
+      console.warn('Erro na API');
+    }
+  }
 }
 
-executaPromise();
+Api.getUserInfo('ArthurPMachado');
+Api.getUserInfo('ArthurPMachadohj90-u349t7u19-34t9013yt08913ty8310');
